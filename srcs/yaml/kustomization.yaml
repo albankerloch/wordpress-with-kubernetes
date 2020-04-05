@@ -13,5 +13,6 @@ secretGenerator:
   - password=1234
 
 resources:
-  - nginx.yaml
+  - nginx-deployment.yaml
+  - nginx-service.yaml
   - ingress.yaml

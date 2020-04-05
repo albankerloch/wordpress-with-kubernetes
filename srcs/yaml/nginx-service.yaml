@@ -6,7 +6,7 @@ metadata:
     io.kompose.service: nginx
 spec:
   selector:
-    app: nginx
+    io.kompose.service: nginx
   ports:
     - name: http
       port: 80
@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: nginx-ssh-https
   labels:
     io.kompose.service: nginx
 spec:
@@ -25,8 +25,8 @@ spec:
     io.kompose.service: nginx
   ports:
     - name: ssh
-      port: 4000
-      nodePort: 4000
+      port: 2222
+      nodePort: 2222
     - name: https
       nodePort: 443
       port: 443

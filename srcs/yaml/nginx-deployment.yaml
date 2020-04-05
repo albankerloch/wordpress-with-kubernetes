@@ -17,7 +17,7 @@ spec:
         io.kompose.service: nginx
     spec:
       containers:
-      - image: nginxalban
+      - image: nginx-image
         imagePullPolicy: Never
         name: nginx
         env:
@@ -30,5 +30,5 @@ spec:
           name: http
         - containerPort: 443
           name: https
-        - containerPort: 4000
+        - containerPort: 2222
           name: ssh
