@@ -1,0 +1,17 @@
+secretGenerator:
+- name: ssh
+  literals:
+  - username=akerloc-
+  - password=1234
+- name: mysql
+  literals:
+  - username=root
+  - password=1234
+- name: ftps
+  literals:
+  - username=akerloc-
+  - password=1234
+
+resources:
+  - nginx.yaml
+  - ingress.yaml
