@@ -1,8 +1,8 @@
 secretGenerator:
 - name: ssh
   literals:
-  - username=akerloc-
-  - password=1234
+  - username=ak
+  - password=123
 - name: mysql
   literals:
   - username=root

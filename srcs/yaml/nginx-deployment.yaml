@@ -20,15 +20,21 @@ spec:
       - image: nginx-image
         imagePullPolicy: Never
         name: nginx
-        env:
-        - name: SSH_USER
-          value: admin
-        - name: SSH_PASSWORD
-          value: admin
         ports:
         - containerPort: 80
           name: http
         - containerPort: 443
           name: https
-        - containerPort: 2222
+        - containerPort: 30022
           name: ssh
+        env:
+        - name: SSH_USER
+          valueFrom:
+            secretKeyRef:
+              name: ssh
+              key: username
+        - name: SSH_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ssh
+              key: password
