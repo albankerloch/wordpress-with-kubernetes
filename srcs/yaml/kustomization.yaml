@@ -12,6 +12,11 @@ secretGenerator:
   - username=akerloc-
   - password=1234
 
+configMapGenerator:
+- name: telegraf-config
+  files:
+  - telegraf.conf=config/telegraf.conf
+
 resources:
   - nginx-deployment.yaml
   - nginx-service.yaml
