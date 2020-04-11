@@ -6,6 +6,6 @@ minikube addons enable ingress
 
 eval $(minikube docker-env)
 
-docker build -t nginxalban srcs/nginx
+docker build -t nginx-image srcs/nginx
 
 kubectl apply -k srcs/yaml
