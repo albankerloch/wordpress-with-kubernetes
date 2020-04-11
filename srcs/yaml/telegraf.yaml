@@ -32,11 +32,12 @@ spec:
     spec:
       containers:
       - name: telegraf
-        image: services/telegraf
+        image: telegraf:alpine
         ports:
         - containerPort: 4999
-        imagePullPolicy: Never
         volumeMounts:
+        - name: config
+          mountPath: "/etc/telegraf"
         - name: dockersock
           mountPath: "/var/run/docker.sock"
         env:
@@ -49,6 +50,9 @@ spec:
           - name: INFLUX_PASSWORD
             value: "services"
       volumes:
+      - name: config
+        configMap:
+          name: telegraf-config
       - name: dockersock
         hostPath:
           path: /var/run/docker.sock
