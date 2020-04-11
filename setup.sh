@@ -4,6 +4,8 @@ minikube start --vm-driver=virtualbox --extra-config=apiserver.service-node-port
 
 minikube addons enable ingress
 
+export IP_MINIKUBE=$(minikube ip)
+
 eval $(minikube docker-env)
 
 docker build -t nginx-image srcs/nginx

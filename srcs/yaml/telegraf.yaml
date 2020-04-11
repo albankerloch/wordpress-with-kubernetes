@@ -49,6 +49,10 @@ spec:
             value: "false"
           - name: INFLUX_PASSWORD
             value: "services"
+          - name: MINI_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
       volumes:
       - name: config
         configMap:
