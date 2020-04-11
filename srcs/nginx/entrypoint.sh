@@ -1,6 +1,5 @@
 #!/bin/sh
 
-mv -f /sshd_config /etc/ssh/sshd_config
 mkdir .ssh
 mv /authorized_keys .ssh/authorized_keys
 chmod 600 /etc/ssh/ssh_host_rsa_key
