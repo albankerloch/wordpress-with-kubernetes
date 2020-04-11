@@ -23,7 +23,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 2Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -41,7 +41,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -61,10 +61,9 @@ spec:
     spec:
       containers:
       - name: influxdb
-        image: services/influxdb
+        image: influxdb:alpine
         ports:
         - containerPort: 8086
-        imagePullPolicy: Never
         volumeMounts:
         - name: influxdb-persistent-storage
           mountPath: /var/lib/influxdb
