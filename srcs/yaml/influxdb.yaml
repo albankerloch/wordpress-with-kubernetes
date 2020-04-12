@@ -61,7 +61,8 @@ spec:
     spec:
       containers:
       - name: influxdb
-        image: influxdb:alpine
+        image: influxdb-image
+        imagePullPolicy: Never
         ports:
         - containerPort: 8086
         volumeMounts:
