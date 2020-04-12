@@ -7,7 +7,7 @@ COPY srcs/install.sh /tmp/install.sh
 RUN sh /tmp/install.sh && rm -f /tmp/install.sh
 COPY datasources.yml /usr/share/grafana/conf/provisioning/datasources/
 COPY dashboard.yml /usr/share/grafana/conf/provisioning/dashboards/
-COPY Nginx.json /etc/grafana/provisioning/dashboards/Nginx.json
+COPY *.json /etc/grafana/provisioning/dashboards/
 
 EXPOSE 3000
 
