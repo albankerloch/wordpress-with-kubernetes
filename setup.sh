@@ -12,5 +12,6 @@ docker build -t nginx-image srcs/nginx
 docker build -t telegraf-image srcs/telegraf
 docker build -t influxdb-image srcs/influxdb
 docker build -t grafana-image srcs/grafana
+docker build -t ftps-image srcs/ftps
 
 kubectl apply -k srcs/yaml

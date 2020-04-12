@@ -46,7 +46,7 @@ spec:
         app: ftps
     spec:
       containers:
-      - image: ftpsalban
+      - image: ftps-image
         imagePullPolicy: Never
         name: ftps
         env:

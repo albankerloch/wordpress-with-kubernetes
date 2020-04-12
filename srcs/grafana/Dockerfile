@@ -1,19 +1,16 @@
 FROM alpine
+ 
+USER root
 
-RUN apk update && apk add --no-cache --upgrade bash \
-&& apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main libc6-compat
+COPY srcs/install.sh /tmp/install.sh
 
-RUN wget https://dl.grafana.com/oss/release/grafana-6.6.0.linux-amd64.tar.gz \
-&& tar -zxvf grafana-6.6.0.linux-amd64.tar.gz \
-&& rm /grafana-6.6.0/conf/defaults.ini \
-&& rm -rf /var/cache/apk/* 	
-
-RUN mkdir -p /etc/grafana/provisioning/dashboards
-
-COPY datasources.yml /etc/grafana/provisioning/datasources/
-COPY dashboard.yml /etc/grafana/provisioning/dashboards/
-COPY *.json /etc/grafana/provisioning/dashboards/
+RUN sh /tmp/install.sh && rm -f /tmp/install.sh
+COPY datasources.yml /usr/share/grafana/conf/provisioning/datasources/
+COPY dashboard.yml /usr/share/grafana/conf/provisioning/dashboards/
+COPY *.json /usr/share/grafana/provisioning/dashboards/
 
 EXPOSE 3000
 
-ENTRYPOINT /usr/sbin/grafana-server --config=/etc/grafana.ini
+WORKDIR /usr/share/grafana
+
+ENTRYPOINT /etc/init.d/telegraf start; /usr/sbin/grafana-server --config=/etc/grafana.ini
