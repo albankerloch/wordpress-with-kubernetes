@@ -60,6 +60,10 @@ spec:
             secretKeyRef:
               name: ftps
               key: password
+        - name: MINI_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
         ports:
         - containerPort: 21
           hostPort: 21

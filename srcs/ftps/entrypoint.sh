@@ -4,4 +4,4 @@ mkdir -p /ftps/$FTP_USER
 adduser -h /ftps/$FTP_USER -D $FTP_USER
 echo "$FTP_USER:$FTP_PASSWORD" | chpasswd
 
-/usr/sbin/pure-ftpd -j -Y 2 -p 21000:21000 -P "192.168.99.100"
+/usr/sbin/pure-ftpd -j -Y 2 -p 21000:21000 -P "$MINI_IP"
