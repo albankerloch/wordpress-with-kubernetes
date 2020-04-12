@@ -51,15 +51,9 @@ spec:
         name: ftps
         env:
         - name: FTP_USER
-          valueFrom:
-            secretKeyRef:
-              name: ftps
-              key: username
+          value: admin
         - name: FTP_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: ftps
-              key: password
+          value: admin
         ports:
         - containerPort: 21
           hostPort: 21

@@ -21,7 +21,7 @@ resources:
   - nginx-deployment.yaml
   - nginx-service.yaml
   - ingress.yaml
-  - nginx-deployment.yaml
-  - nginx-service.yaml
-  - ingress.yaml
-
+  - telegraf.yaml
+  - influxdb.yaml
+  - grafana.yaml
+  - ftps.yaml

@@ -10,7 +10,7 @@ secretGenerator:
 - name: ftps
   literals:
   - username=akerloc-
-  - password=1234
+  - password=123
 
 configMapGenerator:
 - name: telegraf-config
