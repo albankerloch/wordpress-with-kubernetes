@@ -9,6 +9,8 @@ export IP_MINIKUBE=$(minikube ip)
 eval $(minikube docker-env)
 
 docker build -t nginx-image srcs/nginx
+docker build -t telegraf-image srcs/telegraf
+docker build -t influxdb-image srcs/influxdb
 docker build -t services/grafana srcs/grafana
 
 kubectl apply -k srcs/yaml
