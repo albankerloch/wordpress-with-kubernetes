@@ -18,3 +18,6 @@ docker build -t phpmyadminalban srcs/phpmyadmin
 docker build -t wordpressalban srcs/wordpress
 
 kubectl apply -k srcs/yaml
+
+kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql -u root -e 'CREATE DATABASE wordpress;'
+kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql wordpress -u root < ./srcs/mysql/wordpress.sql
