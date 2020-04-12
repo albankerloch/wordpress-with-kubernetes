@@ -13,5 +13,8 @@ docker build -t telegraf-image srcs/telegraf
 docker build -t influxdb-image srcs/influxdb
 docker build -t grafana-image srcs/grafana
 docker build -t ftps-image srcs/ftps
+docker build -t mysqlalban srcs/mysql
+docker build -t phpmyadminalban srcs/phpmyadmin
+docker build -t wordpressalban srcs/wordpress
 
 kubectl apply -k srcs/yaml

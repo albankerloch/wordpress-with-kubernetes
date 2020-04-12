@@ -25,3 +25,13 @@ resources:
   - influxdb.yaml
   - grafana.yaml
   - ftps.yaml
+  - mysql-pv-claim.yaml
+  - mysql-pv-volume.yaml
+  - wp-pv-claim.yaml
+  - wp-pv-volume.yaml
+  - deployment-mysql.yaml
+  - deployment-wordpress.yaml
+  - deployment-phpmyadmin.yaml
+  - service-mysql.yaml
+  - service-wordpress.yaml
+  - service-phpmyadmin.yaml

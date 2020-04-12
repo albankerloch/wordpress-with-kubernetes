@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: wordpress
+  name: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: wordpress
+  template:
+    metadata:
+      labels:
+        io.kompose.service: wordpress
+    spec:
+      volumes:
+      - name: wp-persistent-storage
+        persistentVolumeClaim:
+          claimName: wp-pv-claim
+      containers:
+      - image: wordpressalban
+        imagePullPolicy: Never
+        name: wordpress
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        volumeMounts:
+        - name: wp-persistent-storage
+          mountPath: "/var/www/html"     

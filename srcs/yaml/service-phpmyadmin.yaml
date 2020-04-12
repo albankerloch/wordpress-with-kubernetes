@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin
+spec:
+  ports:
+    - name: http
+      port: 80
+      nodePort: 5000
+  selector:
+    io.kompose.service: phpmyadmin
+  type: NodePort
