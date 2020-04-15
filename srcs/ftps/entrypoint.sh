@@ -1,4 +1,5 @@
 #!/bin/sh
+
 mkdir -p /ftps/$FTP_USER
 
 adduser -h /ftps/$FTP_USER -D $FTP_USER

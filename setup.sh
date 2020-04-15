@@ -3,6 +3,7 @@
 minikube start --vm-driver=virtualbox --extra-config=apiserver.service-node-port-range=1-35000 --cpus 2 --disk-size=10000mb --memory=2000mb
 
 minikube addons enable ingress
+minikube addons enable dashboard
 
 export IP_MINIKUBE=$(minikube ip)
 
@@ -18,6 +19,8 @@ docker build -t phpmyadminalban srcs/phpmyadmin
 docker build -t wordpressalban srcs/wordpress
 
 kubectl apply -k srcs/yaml
+
+sleep 30
 
 kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql -u root -e 'CREATE DATABASE wordpress;'
 kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql wordpress -u root < ./srcs/mysql/wordpress.sql
