@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: ftps
   labels:
-    app: ftps
+    io.kompose.service: ftps
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: ftps
-  replicas: 1
+      io.kompose.service: ftps
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: ftps
+        io.kompose.service: ftps
     spec:
       containers:
       - image: image-ftps

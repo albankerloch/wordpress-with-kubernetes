@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: influxdb
   labels:
-    app: influxdb
+    io.kompose.service: influxdb
 spec:
-  type: NodePort
   ports:
   - port: 8086
     nodePort: 8086
     protocol: TCP
     name: influxdb
   selector:
-    app: influxdb-app
+    io.kompose.service: influxdb
+  type: NodePort

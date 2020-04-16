@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-ssh
+  labels:
+    io.kompose.service: nginx-ssh
 spec:
   ports:
     - name: ssh
@@ -33,12 +35,12 @@ kind: Service
 metadata:
   name: nginx-https
   labels:
-    io.kompose.service: nginx
+    io.kompose.service: nginx-https
 spec:
-  type: NodePort
   selector:
     io.kompose.service: nginx
   ports:
     - name: https
       nodePort: 443
       port: 443
+  type: NodePort

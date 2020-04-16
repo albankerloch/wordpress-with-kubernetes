@@ -1,18 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: telegraf-deployment
+  name: telegraf
   labels:
-    app: telegraf-app
+    io.kompose.service: telegraf
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: telegraf-app
+      io.kompose.service: telegraf
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
-        app: telegraf-app
+        io.kompose.service: telegraf
     spec:
       containers:
       - name: telegraf

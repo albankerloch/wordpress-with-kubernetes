@@ -1,18 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: influxdb-deployment
+  name: influxdb
   labels:
-    app: influxdb-app
+    io.kompose.service: influxdb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: influxdb-app
+      io.kompose.service: influxdb
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
-        app: influxdb-app
+        io.kompose.service: influxdb
     spec:
       containers:
       - name: influxdb

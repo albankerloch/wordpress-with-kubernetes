@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: ftps
   labels:
-    app: ftps
+    io.kompose.service: ftps
 spec:
   ports:
     - port: 21
@@ -11,5 +11,5 @@ spec:
     - port: 21000
       name: ftps-data
   selector:
-    app: ftps
+    io.kompose.service: ftps
   type: LoadBalancer

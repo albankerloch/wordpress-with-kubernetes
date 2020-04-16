@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: grafana
   labels:
-    app: grafana-app
+    io.kompose.service: grafana
 spec:
-  type: NodePort
   ports:
   - port: 3000
     nodePort: 3000
     protocol: TCP
     name: http
   selector:
-    app: grafana-app
+    io.kompose.service: grafana
+  type: NodePort
