@@ -18,20 +18,27 @@ configMapGenerator:
   - telegraf.conf=config/telegraf.conf
 
 resources:
-  - nginx-deployment.yaml
-  - nginx-service.yaml
-  - ingress.yaml
-  - telegraf.yaml
-  - influxdb.yaml
-  - grafana.yaml
-  - ftps.yaml
-  - mysql-pv-claim.yaml
-  - mysql-pv-volume.yaml
-  - wp-pv-claim.yaml
-  - wp-pv-volume.yaml
+  - deployement-ftps.yaml
+  - deployment-grafana.yaml
+  - deployment-influxdb.yaml
   - deployment-mysql.yaml
-  - deployment-wordpress.yaml
+  - deployment-nginx.yaml
   - deployment-phpmyadmin.yaml
+  - deployment-telegraf.yaml
+  - deployment-wordpress.yaml
+  - pv-claim-ftps.yaml
+  - pv-claim-influxdb.yaml
+  - pv-claim-mysql.yaml
+  - pv-claim-wordpress.yaml
+  - pv-volume-influxdb.yaml
+  - pv-volume-mysql.yaml
+  - pv-volume-wordpress.yaml
+  - ingress.yaml
+  - service-ftps.yaml
+  - service-grafana.yaml
+  - service-influxdb.yaml
   - service-mysql.yaml
-  - service-wordpress.yaml
+  - service-nginx.yaml
   - service-phpmyadmin.yaml
+  - service-telegraf.yaml
+  - service-wordpress.yaml

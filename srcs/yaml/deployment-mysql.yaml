@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mysq
-        image: mysqlalban
+        image: image-mysql
         imagePullPolicy: Never
         volumeMounts:
         - name: mysql-persistent-storage

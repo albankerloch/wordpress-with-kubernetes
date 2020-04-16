@@ -19,7 +19,7 @@ spec:
         persistentVolumeClaim:
           claimName: wp-pv-claim
       containers:
-      - image: wordpressalban
+      - image: image-wordpress
         imagePullPolicy: Never
         name: wordpress
         ports:

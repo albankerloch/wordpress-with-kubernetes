@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ftps
+  labels:
+    app: ftps
+spec:
+  ports:
+    - port: 21
+      name: ftps
+    - port: 21000
+      name: ftps-data
+  selector:
+    app: ftps
+  type: LoadBalancer

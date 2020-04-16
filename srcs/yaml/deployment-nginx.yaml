@@ -17,7 +17,7 @@ spec:
         io.kompose.service: nginx
     spec:
       containers:
-      - image: nginx-image
+      - image: image-nginx
         imagePullPolicy: Never
         name: nginx
         ports:
