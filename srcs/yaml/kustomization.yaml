@@ -18,7 +18,7 @@ configMapGenerator:
   - telegraf.conf=config/telegraf.conf
 
 resources:
-  - deployement-ftps.yaml
+  - deployment-ftps.yaml
   - deployment-grafana.yaml
   - deployment-influxdb.yaml
   - deployment-mysql.yaml

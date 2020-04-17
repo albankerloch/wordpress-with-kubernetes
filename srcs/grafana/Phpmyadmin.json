@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 7,
   "links": [],
   "panels": [
     {
@@ -103,7 +103,7 @@
             {
               "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "ftps"
+              "value": "phpmyadmin"
             }
           ]
         }
@@ -198,7 +198,7 @@
             {
               "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "ftps"
+              "value": "phpmyadmin"
             }
           ]
         }
@@ -287,7 +287,7 @@
             {
               "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "ftps"
+              "value": "phpmyadmin"
             }
           ]
         }
@@ -412,7 +412,7 @@
             {
               "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "ftps"
+              "value": "phpmyadmin"
             }
           ]
         }
@@ -486,8 +486,8 @@
     ]
   },
   "timezone": "",
-  "title": "FTPS",
-  "uid": "ti2j3q8Wz",
+  "title": "Phpmyadmin",
+  "uid": "TAHIE_8Wz",
   "variables": {
     "list": []
   },

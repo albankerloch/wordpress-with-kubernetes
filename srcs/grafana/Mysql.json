@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 5,
   "links": [],
   "panels": [
     {
@@ -101,9 +101,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"mysql\",\"containerPort\":3306,\"protocol\":\"TCP\"}]"
+              "value": "mysql"
             }
           ]
         }
@@ -196,9 +196,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"mysql\",\"containerPort\":3306,\"protocol\":\"TCP\"}]"
+              "value": "mysql"
             }
           ]
         }
@@ -285,9 +285,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"mysql\",\"containerPort\":3306,\"protocol\":\"TCP\"}]"
+              "value": "mysql"
             }
           ]
         }
@@ -410,9 +410,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"mysql\",\"containerPort\":3306,\"protocol\":\"TCP\"}]"
+              "value": "mysql"
             }
           ]
         }
@@ -487,9 +487,9 @@
   },
   "timezone": "",
   "title": "Mysql",
-  "uid": "2kxnE_8Wz",
+  "uid": "jI9iP_8Wz",
   "variables": {
     "list": []
   },
-  "version": 28
+  "version": 1
 }

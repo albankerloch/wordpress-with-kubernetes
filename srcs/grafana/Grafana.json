@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 9,
+  "id": 3,
   "links": [],
   "panels": [
     {
@@ -63,7 +63,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.6.0",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "groupBy": [
@@ -101,9 +101,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"containerPort\":3000,\"protocol\":\"TCP\"}]"
+              "value": "grafana"
             }
           ]
         }
@@ -158,7 +158,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.6.0",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "groupBy": [
@@ -196,9 +196,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"containerPort\":3000,\"protocol\":\"TCP\"}]"
+              "value": "grafana"
             }
           ]
         }
@@ -285,9 +285,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"containerPort\":3000,\"protocol\":\"TCP\"}]"
+              "value": "grafana"
             }
           ]
         }
@@ -410,9 +410,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"containerPort\":3000,\"protocol\":\"TCP\"}]"
+              "value": "grafana"
             }
           ]
         }
@@ -487,6 +487,9 @@
   },
   "timezone": "",
   "title": "Grafana",
-  "uid": "9IDjBUjZk",
+  "uid": "R6GqL_8Wk",
+  "variables": {
+    "list": []
+  },
   "version": 1
 }

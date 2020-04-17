@@ -17,7 +17,7 @@ spec:
         io.kompose.service: mysql
     spec:
       containers:
-      - name: mysq
+      - name: mysql
         image: image-mysql
         imagePullPolicy: Never
         volumeMounts:

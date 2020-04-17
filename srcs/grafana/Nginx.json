@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
+  "id": 6,
   "links": [],
   "panels": [
     {
@@ -63,7 +63,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.6.0",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "groupBy": [
@@ -101,9 +101,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"http\",\"containerPort\":80,\"protocol\":\"TCP\"},{\"name\":\"https\",\"containerPort\":443,\"protocol\":\"TCP\"},{\"name\":\"ssh\",\"containerPort\":30022,\"protocol\":\"TCP\"}]"
+              "value": "nginx"
             }
           ]
         }
@@ -158,7 +158,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.6.0",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "groupBy": [
@@ -196,9 +196,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"http\",\"containerPort\":80,\"protocol\":\"TCP\"},{\"name\":\"https\",\"containerPort\":443,\"protocol\":\"TCP\"},{\"name\":\"ssh\",\"containerPort\":30022,\"protocol\":\"TCP\"}]"
+              "value": "nginx"
             }
           ]
         }
@@ -285,9 +285,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"http\",\"containerPort\":80,\"protocol\":\"TCP\"},{\"name\":\"https\",\"containerPort\":443,\"protocol\":\"TCP\"},{\"name\":\"ssh\",\"containerPort\":30022,\"protocol\":\"TCP\"}]"
+              "value": "nginx"
             }
           ]
         }
@@ -410,9 +410,9 @@
           ],
           "tags": [
             {
-              "key": "annotation.io.kubernetes.container.ports",
+              "key": "io.kubernetes.container.name",
               "operator": "=",
-              "value": "[{\"name\":\"http\",\"containerPort\":80,\"protocol\":\"TCP\"},{\"name\":\"https\",\"containerPort\":443,\"protocol\":\"TCP\"},{\"name\":\"ssh\",\"containerPort\":30022,\"protocol\":\"TCP\"}]"
+              "value": "nginx"
             }
           ]
         }
@@ -488,5 +488,8 @@
   "timezone": "",
   "title": "Nginx",
   "uid": "2kxnE_8Wz",
-  "version": 4
+  "variables": {
+    "list": []
+  },
+  "version": 1
 }
