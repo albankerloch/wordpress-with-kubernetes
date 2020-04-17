@@ -28,6 +28,11 @@ spec:
         ports:
         - name: mysql
           containerPort: 3306
+        env:
+          - name: MINI_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
       restartPolicy: Always
       volumes:
       - name: mysql-persistent-storage

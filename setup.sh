@@ -5,7 +5,8 @@ minikube start --vm-driver=virtualbox --extra-config=apiserver.service-node-port
 minikube addons enable ingress
 minikube addons enable dashboard
 
-export IP_MINIKUBE=$(minikube ip)
+cp srcs/mysql/template_wordpress.sql srcs/mysql/wordpress.sql
+sed -i s/__MINI_IP__/$(minikube ip)/g srcs/mysql/wordpress.sql
 
 eval $(minikube docker-env)
 
