@@ -26,11 +26,12 @@ resources:
   - deployment-phpmyadmin.yaml
   - deployment-telegraf.yaml
   - deployment-wordpress.yaml
-  - pv-claim-ftps.yaml
   - pv-claim-influxdb.yaml
+  - pv-claim-ftps.yaml
   - pv-claim-mysql.yaml
   - pv-claim-wordpress.yaml
   - pv-volume-influxdb.yaml
+  - pv-volume-ftps.yaml
   - pv-volume-mysql.yaml
   - pv-volume-wordpress.yaml
   - ingress.yaml
