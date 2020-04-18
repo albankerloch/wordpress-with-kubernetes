@@ -9,6 +9,10 @@ RUN apk upgrade && \
 
 COPY my.cnf /etc/mysql/my.cnf
 
+COPY wordpress.sql /wordpress.sql
+
+COPY wp.sh /wp.sh
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT sh /entrypoint.sh

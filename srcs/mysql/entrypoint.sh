@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sed -i s/__MINI_IP__/$MINI_IP/g wordpress.sql
+
 mysql_install_db --user=root
 tmp=sql_tmp
 

@@ -5,9 +5,6 @@ minikube start --vm-driver=docker --extra-config=apiserver.service-node-port-ran
 minikube addons enable ingress
 minikube addons enable dashboard
 
-cp srcs/mysql/template_wordpress.sql srcs/mysql/wordpress.sql
-sed -i s/__MINI_IP__/$(minikube ip)/g srcs/mysql/wordpress.sql
-
 eval $(minikube docker-env)
 
 docker build -t image-nginx srcs/nginx
@@ -21,7 +18,8 @@ docker build -t image-wordpress srcs/wordpress
 
 kubectl apply -k srcs/yaml
 
-sleep 30
+sleep 10
 
 kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql -u root -e 'CREATE DATABASE wordpress;'
-kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql wordpress -u root < ./srcs/mysql/wordpress.sql
+
+kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh wp.sh
