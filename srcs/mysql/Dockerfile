@@ -1,7 +1,5 @@
 FROM alpine
 
-USER root
-
 RUN apk upgrade && \
     apk add mysql mysql-client --no-cache && \
     mkdir -p /run/mysqld  && \

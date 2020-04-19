@@ -1,9 +1,7 @@
 FROM alpine
  
-USER root
-
 RUN apk update && \
-    apk add grafana telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache  && \
+    apk add grafana --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache  && \
     mkdir -p /etc/grafana/provisioning/dashboards
 
 COPY datasources.yml /usr/share/grafana/conf/provisioning/datasources/

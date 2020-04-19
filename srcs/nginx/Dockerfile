@@ -8,7 +8,7 @@ RUN apk add --update openssl openssh nginx && \
     mkdir -p /usr/share/nginx/html
 
 COPY ssh/sshd_config /etc/ssh/sshd_config
-COPY ssh/id_rsa.pub /etc/ssh/ssh_host_dsa_key
+COPY ssh/id_dsa /etc/ssh/ssh_host_dsa_key
 COPY ssh/id_rsa /etc/ssh/ssh_host_rsa_key
 RUN chmod 600 /etc/ssh/ssh_host_*
 

@@ -1,11 +1,9 @@
 FROM alpine
 
-USER root
-
 ADD  http://files.directadmin.com/services/all/phpMyAdmin/phpMyAdmin-5.0.1-all-languages.tar.gz /tmp/
 
 RUN apk update &&\
-    apk add openrc lighttpd \
+    apk add lighttpd \
     php7 php7-mbstring php7-cgi php7-openssl php7-session php7-zlib php7-common php7-iconv \ 
     php7-json php7-gd php7-curl php7-xml php7-mysqli php7-imap php7-cgi fcgi php7-pdo \ 
     php7-pdo_mysql php7-soap php7-xmlrpc php7-posix php7-mcrypt php7-gettext php7-ldap \ 
@@ -21,10 +19,8 @@ RUN apk update &&\
     chown -R lighttpd:lighttpd /var/run/lighttpd && \
     sed -i 's/\/run\/lighttpd.pid/\/run\/lighttpd\/php-fast-cgi.socket/g' /etc/lighttpd/lighttpd.conf && \
     sed -i 's/#   include "mod_fastcgi.conf"/include "mod_fastcgi.conf"/g' /etc/lighttpd/lighttpd.conf && \
-    sed -i 's/\/usr\/bin\/php-cgi/\/usr\/bin\/php-cgi7/g' /etc/lighttpd/mod_fastcgi.conf && \
-    openrc && \
-    touch /run/openrc/softlevel
-
+    sed -i 's/\/usr\/bin\/php-cgi/\/usr\/bin\/php-cgi7/g' /etc/lighttpd/mod_fastcgi.conf
+    
 COPY config.inc.php /var/www/localhost/htdocs/config.inc.php
 
 EXPOSE 80 

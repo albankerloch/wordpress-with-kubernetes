@@ -18,8 +18,6 @@ docker build -t image-wordpress srcs/wordpress
 
 kubectl apply -k srcs/yaml
 
-sleep 10
-
-kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- mysql -u root -e 'CREATE DATABASE wordpress;'
+sleep 25
 
 kubectl exec -i $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh wp.sh

@@ -8,8 +8,6 @@ RUN mkdir /etc/telegraf \
    && rm -rf *.tar.gz* telegraf/ \
    && rm -rf /var/cache/apk/*
 
-COPY entrypoint.sh /entrypoint.sh
-
 EXPOSE 4999
 
-ENTRYPOINT sh /entrypoint.sh
+ENTRYPOINT ["/usr/bin/telegraf", "$@"]
