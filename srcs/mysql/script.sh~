@@ -1,4 +1,0 @@
-#!/bin/bash
-
-openrc
-touch /run/openrc/softlevel

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo chmod 666 /var/run/docker.sock
+
 minikube start --vm-driver=docker --extra-config=apiserver.service-node-port-range=1-35000 --cpus 2 --disk-size=10000mb --memory=2000mb
 
 minikube addons enable ingress
@@ -17,6 +19,11 @@ docker build -t image-phpmyadmin srcs/phpmyadmin
 docker build -t image-wordpress srcs/wordpress
 
 kubectl apply -k srcs/yaml
+
+until kubectl get pods | grep mysql | grep 1/1 ; do
+	echo -n "."
+	sleep 5
+done;
 
 sleep 25
 

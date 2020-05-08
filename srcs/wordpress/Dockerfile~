@@ -1,2 +1,0 @@
-FROM wordpress:4.7.0-fpm-alpine
-COPY php.ini /usr/local/etc/php/php.ini
