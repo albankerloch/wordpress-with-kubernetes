@@ -37,5 +37,5 @@ kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c 
 ```
 
 #### Author : Alban Kerloc'h
-#### Category: DevSecOps
+#### Category: DevSecOps,Web
 #### Tag: Dockerfile,Docker
