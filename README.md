@@ -13,7 +13,7 @@ Features:
 
 ## Installation
 
-Launch the container with those commands : 
+Launch the container with this commands : 
 
 ```bash
 sudo docker-compose -up -d
